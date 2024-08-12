@@ -16,6 +16,7 @@
 1. Клонируйте репозиторий:
 
    `git clone https://github.com/t-murtazin/docker-project.git
+
    cd docker-project`
 
 3. Сделайте скрипт run.sh исполняемым:
