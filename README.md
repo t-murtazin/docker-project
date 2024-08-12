@@ -15,17 +15,17 @@
 
 1. Клонируйте репозиторий:
 
-   `git clone https://github.com/t-murtazin/docker-project.git
+   `git clone https://github.com/t-murtazin/docker-project.git`
 
-   cd docker-project`
+   `cd docker-project`
 
 3. Сделайте скрипт run.sh исполняемым:
 
-    chmod +x run.sh
+    `chmod +x run.sh`
 
 4. Запустите скрипт run.sh для развертывания приложения:
 
-    ./run.sh
+    `./run.sh`
 
 5. Откройте браузер и перейдите по адресу:
 
