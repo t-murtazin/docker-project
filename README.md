@@ -15,18 +15,18 @@
 
 1. Клонируйте репозиторий:
 
-    git clone https://github.com/t-murtazin/docker-project.git
-    cd docker-project
+   git clone https://github.com/t-murtazin/docker-project.git
+   cd docker-project
 
-2. Сделайте скрипт run.sh исполняемым:
+3. Сделайте скрипт run.sh исполняемым:
 
     chmod +x run.sh
 
-3. Запустите скрипт run.sh для развертывания приложения:
+4. Запустите скрипт run.sh для развертывания приложения:
 
     ./run.sh
 
-4. Откройте браузер и перейдите по адресу:
+5. Откройте браузер и перейдите по адресу:
 
 http://localhost:8080
 
