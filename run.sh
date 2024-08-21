@@ -4,7 +4,6 @@
 NETWORK_NAME=my_network
 MYSQL_CONTAINER=mysql_container
 MYSQL_ROOT_PASSWORD=rootpassword
-MYSQL_DATABASE=testdb
 PHP_CONTAINER=php_container
 MYSQL_IMAGE=mysql:8.0-bookworm
 PHP_IMAGE=my-php-app
@@ -15,12 +14,14 @@ docker network create $NETWORK_NAME
 # Запускаем MySQL контейнер
 docker run -d --name $MYSQL_CONTAINER --network $NETWORK_NAME \
   -e MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD \
-  -e MYSQL_DATABASE=$MYSQL_DATABASE \
   -v $(pwd)/init.sql:/docker-entrypoint-initdb.d/init.sql \
   $MYSQL_IMAGE
 
 # Ожидаем запуска MySQL
-sleep 60
+until docker exec $MYSQL_CONTAINER mysqladmin ping --silent; do
+  echo 'waiting for mysql to be up...'
+  sleep 2
+done
 
 # Запускаем PHP контейнер
 docker build -t $PHP_IMAGE .
