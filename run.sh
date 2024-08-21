@@ -20,7 +20,7 @@ docker run -d --name $MYSQL_CONTAINER --network $NETWORK_NAME \
 # Ожидаем запуска MySQL
 until docker exec $MYSQL_CONTAINER mysqladmin ping --silent; do
   echo 'waiting for mysql to be up...'
-  sleep 2
+  sleep 10
 done
 
 # Запускаем PHP контейнер
