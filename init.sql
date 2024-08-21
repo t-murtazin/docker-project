@@ -11,3 +11,7 @@ CREATE TABLE users (
 INSERT INTO users (name, email) VALUES 
 ('John Doe', 'john@example.com'),
 ('Jane Smith', 'jane@example.com');
+
+CREATE USER 'user'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON testdb.* TO 'user'@'%';
+FLUSH PRIVILEGES;
