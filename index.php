@@ -1,7 +1,7 @@
 <?php
 $servername = "mysql_container";
-$username = "root";
-$password = "rootpassword";
+$username = "user";
+$password = "password";
 $dbname = "testdb";
 
 // Создаем соединение
